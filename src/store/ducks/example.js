@@ -1,13 +1,13 @@
 export const Types = {
   GET_REQUEST: 'example/GET_REQUEST',
   GET_SUCCESS: 'example/GET_SUCCESS',
-  GET_FAILURE: 'example/GET_FAILURE'
+  GET_FAILURE: 'example/GET_FAILURE',
 };
 
 const initialState = {
   data: [],
   loading: true,
-  error: null
+  error: null,
 };
 
 export default function example(state = initialState, action) {
@@ -16,19 +16,19 @@ export default function example(state = initialState, action) {
       return {
         ...state,
         loading: true,
-        error: null
+        error: null,
       };
     case Types.GET_SUCCESS:
       return {
         data: action.payload.data,
         loading: false,
-        error: null
+        error: null,
       };
     case Types.GET_FAILURE:
       return {
         ...state,
         loading: false,
-        error: action.payload.error
+        error: action.payload.error,
       };
     default:
       return state;
@@ -37,16 +37,16 @@ export default function example(state = initialState, action) {
 
 export const Creators = {
   getExampleRequest: () => ({
-    type: Types.GET_REQUEST
+    type: Types.GET_REQUEST,
   }),
 
   getExampleSuccess: data => ({
     type: Types.GET_SUCCESS,
-    payload: { data }
+    payload: { data },
   }),
 
   getExampleFailure: error => ({
     type: Types.GET_FAILURE,
-    payload: { error }
-  })
+    payload: { error },
+  }),
 };

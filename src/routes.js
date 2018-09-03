@@ -5,19 +5,19 @@ import Main from 'pages/main';
 
 const Routes = createStackNavigator(
   {
-    Main: { screen: Main }
+    Main: { screen: Main },
   },
   {
     navigationOptions: {
       headerStyle: {
-        backgroundColor: colors.primary
+        backgroundColor: colors.primary,
       },
       headerTitle: 'Main',
       headerTitleStyle: {
-        color: colors.white
-      }
-    }
-  }
+        color: colors.white,
+      },
+    },
+  },
 );
 
 export default Routes;

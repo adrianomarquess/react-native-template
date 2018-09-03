@@ -18,10 +18,9 @@ class Main extends Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(ExampleActions, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(ExampleActions, dispatch);
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Main);
